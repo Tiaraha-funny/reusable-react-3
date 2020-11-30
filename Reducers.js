@@ -1,5 +1,16 @@
 import React, { useState, useReducer } from "react";
 
+//-------------------UseReducer---VS----UseState-------------------
+
+//This is a custom hook
+
+// function useState(initialValue) {
+//   const [ state, dispatch ] = useReducer(() => {return action}, initialValue)
+//   return [state, dispatch] //this is the most important
+// }
+
+//---------------------------Explanation-----------------------
+
 let array = [1, 2, 3, 4, 5];
 let add = (acc, elem) => acc + Element;
 
@@ -84,4 +95,16 @@ function Reducers() {
   );
 }
 
-export default Reducers;
+//It can be used again and again and they have their own use
+
+const AppReducer = () => {
+  return (
+    <div>
+      <Reducers />
+      <Reducers />
+      <Reducers />
+    </div>
+  )
+}
+
+export default AppReducer;
